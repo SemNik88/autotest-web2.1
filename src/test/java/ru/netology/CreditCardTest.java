@@ -30,7 +30,6 @@ public class CreditCardTest {
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
 
-
     }
 
     @AfterEach
@@ -42,7 +41,7 @@ public class CreditCardTest {
     @Test
     void shouldPositiveTest() {
         driver.get("http://localhost:9999");
-        driver.findElement( By.cssSelector("[data-test-id=name] input")).sendKeys("Петров-Непетров Николай");
+        driver.findElement( By.cssSelector("[data-test-id=name] input")).sendKeys("Петров Петр");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79261234567");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.className("button__text")).click();
